@@ -1,5 +1,92 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 body{
-    background: white;
+    background: #1E201E;
+    color: #ECDFCC;
+}
+
+.row {
+    border: thin solid #3f7741;
+    border-radius: 40px;
+}
+
+.moving {
+  transition: all 0.5s ease-in-out;
+  background-color: #3f7741 !important;
+  z-index: 2;
+  border-radius: 40px;
+}
+
+.start {
+  transform: translateX(50%);
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+.end {
+  transform: translateX(-50%);
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.row > .d-flex {
+    justify-content: center !important;
+}
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: auto;
+}
+
+.btn {
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+ul {
+    transform: translate(0px, 40px) !important;
+    background-color: #1E201E !important;
+    z-index: 1 !important;
+}
+
+ul > li {
+  color: #ECDFCC !important;
+}
+
+ul > li:hover {
+  background-color: #618057 !important;
+}
+
+.form-control {
+    background-color: #1E201E !important;
+    color: #ECDFCC;
+}
+
+.input-group > .form-control {
+    border-radius: 4px !important;
+}
+
+.form-control:focus {
+    outline: none !important;
+    border-color: #618057 !important;
+    box-shadow: 0 0 5px #4caf50 !important; 
+    color: #ECDFCC;
+}
+
+input[type="radio"] {
+  accent-color: #4caf50;
+}
+
+p, input {
+  border-color: #ECDFCC !important;
+}
+
+.btn-primary,
+.btn-primary:hover, 
+.btn-primary:active,
+.btn-primary:disabled {
+    outline: none !important;
+    background-color: #618057 !important;
+    box-shadow: 0 0 5px #4caf50 !important; 
+    border-color: #618057 !important;
 }

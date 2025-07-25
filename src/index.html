@@ -15,21 +15,48 @@
     />
   </head>
   <body>
-    <!-- Write your HTML code here, you can delete everything withing the body tags -->
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./assets/img/rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <div class="container-fluid vh-100">
+      <div class="row h-50 w-75 position-absolute top-50 start-50 translate-middle justify-content-evenly align-items-center">
+        <div class="moving start position-absolute h-100 w-50"></div>
+        <div class="col-5 d-flex flex-column h-100 align-items-center">
+          <h2>Generate domain</h2>
+          <p class="text-center border-bottom w-75">&nbsp;</p>
+          <button class="btn btn-secondary w-50">Generate</button>
+        </div>
+        <div class="col-5 d-flex flex-column h-100 justify-content-evenly align-items-center">
+          <h2>Choose domain</h2>
+          <form class="d-flex w-100 h-75 flex-column justify-content-evenly align-items-center">
+            <input 
+              class="form-control mt-4 mb-2" 
+              id="nameSearch" 
+              type="search" 
+              placeholder="Domain name"
+              autocomplete="off">
+            <div class="input-group w-100">
+              <input 
+                class="form-control" 
+                id="tdlSearch" 
+                type="search" 
+                placeholder="TDL"
+                autocomplete="off"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <ul class="dropdown-menu d-none" id="tdlDropdown"></ul>
+                <div class="form-check px-3 py-1">
+                  <input type="radio" name="tdl" id="gTDL" checked>
+                  <label class="form-check-label" for="gTDL">gTDL</label>
+                  <input class="ms-2" type="radio" name="tdl" id="sTDL">
+                  <label class="form-check-label me-2" for="sTDL">sTDL</label>
+                  <input type="radio" name="tdl" id="ccTDL">
+                  <label class="form-check-label" for="ccTDL">ccTDL</label>
+                </div>
+            </div>
+            <p class="text-center border-bottom w-75 mt-4">&nbsp;</p>
+            <button class="btn btn-primary w-50 disabled">Create</button>
+          </form>
+        </div>
       </div>
     </div>
-
-    <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
     <script type="module" src="/app.js"></script>
   </body>
 </html>
